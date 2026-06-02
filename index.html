@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Image Gallery</h1>
+        <p class="subtitle">Explore our collection</p>
+    </header>
+
+    <section class="filter-section">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="urban">Urban</button>
+            <button class="filter-btn" data-filter="animals">Animals</button>
+            <button class="filter-btn" data-filter="abstract">Abstract</button>
+        </div>
+    </section>
+
+    <main class="gallery-container">
+        <section class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Mountain landscape" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Nature</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop" alt="Forest path" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Nature</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=400&h=300&fit=crop" alt="Ocean waves" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Nature</span>
+                </div>
+            </div>
+
+            <!-- Urban Images -->
+            <div class="gallery-item" data-category="urban">
+                <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&h=300&fit=crop" alt="City lights" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Urban</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="urban">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop" alt="Architecture" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Urban</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="urban">
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop" alt="Street photography" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Urban</span>
+                </div>
+            </div>
+
+            <!-- Animals Images -->
+            <div class="gallery-item" data-category="animals">
+                <img src="lionportrait.jpg" alt="Lion portrait" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Animals</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=400&h=300&fit=crop" alt="Wolf in snow" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Animals</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1618826411640-d6df44dd3f7a?w=400&h=300&fit=crop" alt="Butterfly" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Animals</span>
+                </div>
+            </div>
+            <!-- Abstract Images -->
+            <div class="gallery-item" data-category="abstract">
+                <img src="abstractcolors.jpg" alt="Abstract colors" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Abstract</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="abstract">
+                <img src="neonlights.jpg" alt="Neon lights" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Abstract</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="abstract">
+                <img src="DA.jpg" alt="Digital art" class="gallery-img">
+                <div class="overlay">
+                    <span class="category-tag">Abstract</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            
+            <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+            
+            <div class="lightbox-image-container">
+                <img id="lightboxImg" src="" alt="Fullscreen image" class="lightbox-img">
+                <div class="image-counter">
+                    <span id="currentImage">1</span> / <span id="totalImages">12</span>
+                </div>
+            </div>
+            
+            <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
